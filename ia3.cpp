@@ -52,4 +52,18 @@ public:
         cout << key << " not found in hash table."
              << endl;
     }
+ // Display complete hash table
+    void display() {
+        cout << "\n========== HASH TABLE ==========\n";
 
+        for (int i = 0; i < TABLE_SIZE; i++) {
+            cout << "Index " << i << " : ";
+
+            if (table[i].empty()) {
+                cout << "EMPTY";
+            } else {
+                for (int j = 0; j < table[i].size(); j++) {
+                    cout << table[i][j] << " -> ";
+                }
+                cout << "NULL";
+            }
