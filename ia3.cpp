@@ -101,6 +101,21 @@ int main() {
     for (int i = 0; i < DATA_SIZE; i++) {
         cout << mangoes[i] << " ";
     }
+ // Display final hash table
+    ht.display();
+
+    // Search operation
+    int key;
+
+    cout << "\nEnter mango value to search: ";
+    cin >> key;
+
+    ht.search(key);
+
+    cout << "\nProgram Executed Successfully.\n";
+
+    return 0;
+}
 
     cout << "\n\nInserting Elements:\n";
 
