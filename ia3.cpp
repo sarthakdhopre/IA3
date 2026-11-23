@@ -67,3 +67,43 @@ public:
                 }
                 cout << "NULL";
             }
+  cout << "NULL";
+            }
+
+            cout << endl;
+        }
+    }
+};
+
+int main() {
+
+    cout << "====================================\n";
+    cout << "       MANGO VARIETIES HASHING\n";
+    cout << "====================================\n";
+
+    cout << "Name : Sarthak Anil Dhopre\n";
+    cout << "PRN  : 202501100021\n";
+
+    // Dataset generated using:
+    // v[i] = (21 + 13 * i) % 100
+
+    int mangoes[DATA_SIZE] = {
+        21, 34, 47, 60, 73,
+        86, 99, 12, 25, 38,
+        51, 64, 77, 90, 3,
+        16, 29, 42, 55, 68
+    };
+
+    HashTable ht;
+
+    cout << "\nOriginal Mango Dataset:\n";
+
+    for (int i = 0; i < DATA_SIZE; i++) {
+        cout << mangoes[i] << " ";
+    }
+
+    cout << "\n\nInserting Elements:\n";
+
+    for (int i = 0; i < DATA_SIZE; i++) {
+        ht.insert(mangoes[i]);
+    }
