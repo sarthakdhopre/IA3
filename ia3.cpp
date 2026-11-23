@@ -1,0 +1,27 @@
+
+#include <iostream>
+#include <vector>
+using namespace std;
+
+const int TABLE_SIZE = 37;
+const int DATA_SIZE = 20;
+
+class HashTable {
+private:
+    vector<int> table[TABLE_SIZE];
+
+public:
+
+    // Mid-Square Hash Function
+    int hashFunction(int key) {
+        int square = key * key;
+
+        // Extract middle two digits
+        // Equivalent to padding the square to 4 digits
+        int middleDigits = (square / 10) % 100;
+
+        return middleDigits % TABLE_SIZE;
+    }
+
+    // Insert using Separate Chaining
+    
