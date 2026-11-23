@@ -24,4 +24,16 @@ public:
     }
 
     // Insert using Separate Chaining
-    
+    void insert(int key) {
+        int index = hashFunction(key);
+
+        cout << "Inserting " << key
+             << " at index " << index;
+
+        if (!table[index].empty()) {
+            cout << " -> Collision occurred";
+        }
+
+        table[index].push_back(key);
+        cout << endl;
+    }
