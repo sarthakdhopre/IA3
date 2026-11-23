@@ -37,3 +37,19 @@ public:
         table[index].push_back(key);
         cout << endl;
     }
+ // Search an element
+    void search(int key) {
+        int index = hashFunction(key);
+
+        for (int i = 0; i < table[index].size(); i++) {
+            if (table[index][i] == key) {
+                cout << key << " found at index "
+                     << index << endl;
+                return;
+            }
+        }
+
+        cout << key << " not found in hash table."
+             << endl;
+    }
+
